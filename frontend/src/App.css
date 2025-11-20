@@ -1,0 +1,8 @@
+/* Styles pour le composant App */
+
+.App {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
