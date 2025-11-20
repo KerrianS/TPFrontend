@@ -1,0 +1,148 @@
+.welcome-container {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.welcome-header {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.welcome-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 48px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-authenticated,
+.welcome-guest {
+  margin: 40px 0;
+}
+
+.welcome-user {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.welcome-role {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.role-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.role-admin {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.role-user {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.role-guest {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+}
+
+.welcome-description {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: var(--text-secondary);
+}
+
+.welcome-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 6px 20px rgba(240, 147, 251, 0.5);
+}
+
+.btn-logout {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.btn-logout:hover {
+  background: #d0d0d0;
+}
+
+.welcome-info {
+  margin-top: 60px;
+  padding: 30px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.welcome-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.welcome-info li {
+  font-size: 18px;
+  padding: 10px;
+  color: var(--text-secondary);
+}
+

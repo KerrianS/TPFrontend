@@ -1,0 +1,111 @@
+.users-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.users-nav {
+  background: var(--bg-secondary);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.users-nav-left,
+.users-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.users-nav-right {
+  min-width: fit-content;
+}
+
+.nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--hover-color);
+}
+
+.current-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.role-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.role-admin {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.role-user {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.role-guest {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+}
+
+.btn-logout {
+  padding: 8px 16px;
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-logout:hover {
+  background: #d0d0d0;
+}
+
+.users-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.users-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.users-description {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+

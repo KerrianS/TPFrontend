@@ -1,0 +1,129 @@
+.forbidden-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-primary);
+  padding: 20px;
+}
+
+.forbidden-content {
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.forbidden-title {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #f5576c;
+  font-weight: 700;
+}
+
+.forbidden-message {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.forbidden-info {
+  background: var(--bg-tertiary);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.forbidden-info p {
+  margin: 10px 0;
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+.forbidden-hint {
+  font-size: 14px !important;
+  color: var(--text-secondary) !important;
+  font-style: italic;
+}
+
+.role-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.role-admin {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.role-user {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.role-guest {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+}
+
+.forbidden-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.5);
+}
+
+.forbidden-code {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+.forbidden-code span {
+  background: var(--bg-tertiary);
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
