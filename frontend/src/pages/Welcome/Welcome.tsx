@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '../../components/Link/Link';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import ThemeToggle from '../../components/ThemeToggle/ThemeToggle';
 import './Welcome.css';

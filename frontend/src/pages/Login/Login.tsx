@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useRouter } from '../../context/RouterContext';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import './Login.css';
 
@@ -10,7 +10,7 @@ function Login() {
   const [isLoading, setIsLoading] = useState(false);
   
   const { login } = useAuth();
-  const { navigate } = useRouter();
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

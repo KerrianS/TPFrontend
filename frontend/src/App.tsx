@@ -1,7 +1,7 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
-import { RouterProvider, useRouter } from './context/RouterContext';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import Welcome from './pages/Welcome/Welcome';
 import Login from './pages/Login/Login';
@@ -10,54 +10,29 @@ import AdminPanel from './pages/AdminPanel/AdminPanel';
 import Forbidden from './pages/Forbidden/Forbidden';
 import './App.css';
 
-function AppRouter() {
-  const { currentPath, navigate } = useRouter();
-
-  const renderRoute = () => {
-    if (currentPath === '/login') {
-      return <Login />;
-    }
-
-    if (currentPath === '/forbidden') {
-      return <Forbidden />;
-    }
-
-    if (currentPath === '/users') {
-      return (
-        <ProtectedRoute rolesRequis={['admin', 'user', 'guest']}>
-          <Users />
-        </ProtectedRoute>
-      );
-    }
-
-    if (currentPath === '/admin') {
-      return (
-        <ProtectedRoute rolesRequis={['admin']}>
-          <AdminPanel />
-        </ProtectedRoute>
-      );
-    }
-
-    if (currentPath === '/') {
-      return <Welcome />;
-    }
-
-    navigate('/');
-    return null;
-  };
-
-  return <>{renderRoute()}</>;
-}
-
 function App() {
   return (
-    <ThemeProvider>
-      <RouterProvider>
+    <BrowserRouter>
+      <ThemeProvider>
         <AuthProvider>
-          <AppRouter />
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forbidden" element={<Forbidden />} />
+            
+            <Route element={<ProtectedRoute rolesRequis={['admin', 'user', 'guest']} />}>
+              <Route path="/users" element={<Users />} />
+            </Route>
+            
+            <Route element={<ProtectedRoute rolesRequis={['admin']} />}>
+              <Route path="/admin" element={<AdminPanel />} />
+            </Route>
+            
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
         </AuthProvider>
-      </RouterProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
